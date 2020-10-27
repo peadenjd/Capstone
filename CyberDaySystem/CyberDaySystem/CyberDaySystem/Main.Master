@@ -22,6 +22,7 @@
                     <li><a href ="AssignStudent.aspx">Student & Event</a></li>
                     <li><a href ="AssignVolunteer.aspx">Volunteer & Event</a></li>
                     <li><a href ="AssignCoordinator.aspx">Coordinator & Event</a></li>
+                    <li><a href ="CoordinatorReport.aspx">Attendees Report</a></li>
                     <li><a href ="EventInfo.aspx">Event Details</a></li>
                     <li><a href ="PersonInfo.aspx">Personnel Details</a></li>
                     <li><a href ="LogOut.aspx">Log out</a></li>
