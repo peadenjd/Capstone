@@ -75,6 +75,18 @@
                         <asp:TextBox ID="txtparentEmail" runat="server"></asp:TextBox>
                     </asp:TableCell>
                 </asp:TableRow>
+                 <asp:TableRow>
+            <asp:TableCell>
+                        <asp:Label ID ="lblParentAuthorization" runat="server" Text="Do you agree to the signed photo release of your child?"></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell>
+                        <asp:RadioButtonList ID ="rdoParentSignature" runat="server" RepeatDirection="Horizontal">
+                            <asp:ListItem Text ="Yes" Value="1"></asp:ListItem>
+                            <asp:ListItem Text="No" Value="0"></asp:ListItem>
+                        </asp:RadioButtonList>
+                    </asp:TableCell>
+                </asp:TableRow>
+
 
              </asp:Table> 
         </div>

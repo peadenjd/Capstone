@@ -168,6 +168,24 @@ namespace CyberDaySystem
         protected global::System.Web.UI.WebControls.TextBox txtparentEmail;
 
         /// <summary>
+        /// lblParentAuthorization control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblParentAuthorization;
+
+        /// <summary>
+        /// rdoParentSignature control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rdoParentSignature;
+
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>

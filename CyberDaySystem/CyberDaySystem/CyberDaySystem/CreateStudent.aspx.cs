@@ -12,6 +12,8 @@ using System.Configuration;
 using System.Security.Policy;
 using System.Windows;
 using System.Data;
+using System.Net;
+using System.Net.Mail;
 
 namespace CyberDaySystem
 {
@@ -60,6 +62,57 @@ namespace CyberDaySystem
                     Insetr_Student(FirstName, LastName, Age, Notes, LunchTicket, TeacherID, ParentAttending, ParentEmail);
                     //System.Windows.MessageBox.Show("OK! Added Student Successfully!");
                     Response.Write("<script>alert('OK! Added Student Successfully!');</script>");
+                    string selectedValue = rdoParentSignature.SelectedValue;
+
+
+                    if (rdoParentSignature.SelectedValue == "1")
+                    {
+                        MailMessage mail = new MailMessage();
+
+                        SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                        mail.From = new MailAddress("johnsmithtesting8901@gmail.com");
+                        mail.To.Add(ParentEmail);
+                        mail.Subject = "JMU CyberDay Photo Authorization Request";
+                        mail.Body = "Hello, " +
+                            "\n" +
+                            "\nThank you for releasing your child's: " + FirstName + " " + LastName + " photo authorizaton Request. We will strive to make the event as productive as possible." +
+                            "\n" +
+                            "\nThank you,  " +
+                            "\n" +
+                            "\nThe JMU CyberDay Team";
+
+                        SmtpServer.Port = 587;
+                        SmtpServer.Credentials = new System.Net.NetworkCredential("johnsmithtesting8901@gmail.com", "hotWeather!!3952#?suN");
+                        SmtpServer.EnableSsl = true;
+                        SmtpServer.Send(mail);
+
+
+                    }
+
+
+                    if (rdoParentSignature.SelectedValue == "0")
+                    {
+                        MailMessage mail = new MailMessage();
+
+                        SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                        mail.From = new MailAddress("johnsmithtesting8901@gmail.com");
+                        mail.To.Add(ParentEmail);
+                        mail.Subject = "JMU CyberDay Photo Authorization Request";
+                        mail.Body = "Hello, " +
+                            "\n" +
+                            "\nThis email is an acknowledgement that you did not authorize for your child's: " + FirstName + " " + LastName + " Photo Authorizaton Request. We understand your decision." +
+                            "\n" +
+                            "\nThank you ,  " +
+                            "\n" +
+                            "\nThe JMU CyberDay Team";
+
+                        SmtpServer.Port = 587;
+                        SmtpServer.Credentials = new System.Net.NetworkCredential("johnsmithtesting8901@gmail.com", "hotWeather!!3952#?suN");
+                        SmtpServer.EnableSsl = true;
+                        SmtpServer.Send(mail);
+
+
+                    }
 
                 }
                 catch (SqlException ex)
