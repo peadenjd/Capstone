@@ -5,7 +5,5 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div>
-            <%--<asp:Label ID="lblUserStatus" runat="server" Text=""></asp:Label>--%>
-            <asp:Image ID="Image1" runat="server" ImageUrl="/Images/welcome.jpg"/>
-        </div>
+ <asp:Image ID="Image1" runat="server" ImageUrl="~/images/Welcome.jpg" Height="579px" Width="1199px" style="margin-top: 0px"/>        </div>
 </asp:Content>
