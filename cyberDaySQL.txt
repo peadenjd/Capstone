@@ -162,7 +162,6 @@ INSERT INTO SimpleCredentials VALUES ('dukedog', 'pass');
 INSERT INTO SimpleCredentials VALUES ('testuser', 'pass');
 
 SELECT * FROM Event;
-SELECT * FROM ShirtInfo;
 SELECT * FROM EventPersonnel;
 SELECT * FROM EventPresenter;
 SELECT * FROM School;
