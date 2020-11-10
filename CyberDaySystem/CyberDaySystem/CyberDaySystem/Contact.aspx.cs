@@ -7,13 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace CyberDaySystem
 {
-    public partial class Site1 : System.Web.UI.MasterPage
+    public partial class WebForm2 : System.Web.UI.Page
     {
-        public static string visitor = "Account";
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            //hh.InnerHtml = visitor;
 
         }
     }

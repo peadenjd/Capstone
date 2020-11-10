@@ -3,20 +3,20 @@
     margin: 0px;
 }
 
-/*body*/
+body
 body {
     background-color: lightcyan;
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
 }
 
-/*wrapper*/
+wrapper
 .wrapper {
     width: 1200px;
     margin: auto;
 }
 
-/*HomePage*/
+HomePage
 .content {
     width: 100%;
     background-color: #b6fff0;
@@ -28,7 +28,7 @@ body {
     min-height: 600px;
 }
 
-/*menu*/
+menu
 .menu {
     background-color: #ffb6fc;
     width: auto;
@@ -93,7 +93,7 @@ body {
     clear: both;
 }
 
-/*footer*/
+footer
 .footer {
     height: 50px;
     background-color: #ffb6fc;

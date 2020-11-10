@@ -111,7 +111,6 @@ C:\Users\50joh\source\repos\Capstone\CyberDaySystem\CyberDaySystem\CyberDaySyste
 C:\Users\50joh\source\repos\Capstone\CyberDaySystem\CyberDaySystem\CyberDaySystem\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\50joh\source\repos\Capstone\CyberDaySystem\CyberDaySystem\CyberDaySystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\50joh\source\repos\Capstone\CyberDaySystem\CyberDaySystem\CyberDaySystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\50joh\source\repos\Capstone\CyberDaySystem\CyberDaySystem\CyberDaySystem\obj\Debug\CyberDaySystem.csprojAssemblyReference.cache
 C:\Users\50joh\source\repos\Capstone\CyberDaySystem\CyberDaySystem\CyberDaySystem\obj\Debug\CyberDaySystem.csproj.CoreCompileInputs.cache
 C:\Users\50joh\source\repos\Capstone\CyberDaySystem\CyberDaySystem\CyberDaySystem\obj\Debug\CyberDaySystem.csproj.CopyComplete
 C:\Users\50joh\source\repos\Capstone\CyberDaySystem\CyberDaySystem\CyberDaySystem\obj\Debug\CyberDaySystem.dll

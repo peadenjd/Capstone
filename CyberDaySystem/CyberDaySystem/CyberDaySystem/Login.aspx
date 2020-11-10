@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+        <form id="form1" runat="server">
         <div>
              <asp:Table runat="server">
                 <asp:TableRow>
@@ -50,6 +50,6 @@
                 </asp:TableRow>
             </asp:Table>
         </div>
-    </form>
+            </form>
 </body>
 </html>
