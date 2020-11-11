@@ -42,6 +42,7 @@ namespace CyberDaySystem
                 txtUsername.Visible = true;
                 txtPassword.Visible = true;
                 btnLogIn.Visible = true;
+                
             }
             else
             {

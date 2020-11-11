@@ -16,11 +16,10 @@
 
 <body>
     <form id="form1" runat="server">
-
+        
         <ul  class ="nav nav-tabs">
-          <%--  <li class="nav-item">
-                <a class="nav-link active" href="LogIn1.aspx">Log-In</a>
-            </li>--%>
+        
+
             <li class="nav-item">
                 <a class="nav-link active" href="HomePage.aspx">Homepage</a>
             </li>
