@@ -4431,6 +4431,9 @@ input[type="button"].btn-block {
     list-style: none;
     
 }
+    .nav .login-container{
+    float:right;
+    }
 
 .nav-link {
     display: block;
@@ -11747,3 +11750,36 @@ html {
     .demo:hover {
         opacity: 1;
     }
+
+    .grid-cell{
+        color:fuchsia
+    }
+
+.mydropdownlist {
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #cc2a41;
+    font-weight: bold;
+}
+
+.mydropdownlist1 {
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px 12px;
+    background-color: #292929;
+    font-weight: bold;
+}
+
+.nav .login-container button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}

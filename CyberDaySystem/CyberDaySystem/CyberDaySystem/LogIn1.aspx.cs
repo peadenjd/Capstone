@@ -13,7 +13,7 @@ using System.Data.Common;
 
 namespace CyberDaySystem
 {
-    public partial class WebForm9 : System.Web.UI.Page
+    public partial class LogIn1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -116,7 +116,12 @@ namespace CyberDaySystem
 
         protected void lnkcreate_Click(object sender, EventArgs e)
         {
-            Response.Redirect("createUser.aspx", false);
+            Response.Redirect("CreateNewUser.aspx", false);
+        }
+
+        protected void btnCreateUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CreateNewUser.aspx", false);
         }
     }
-}
+    }

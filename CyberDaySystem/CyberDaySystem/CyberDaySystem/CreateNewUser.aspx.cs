@@ -13,7 +13,7 @@ using System.Configuration;
 
 namespace CyberDaySystem
 {
-    public partial class WebForm11 : System.Web.UI.Page
+    public partial class WebForm4 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -108,28 +108,7 @@ namespace CyberDaySystem
 
         protected void lnkLogin_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx", false);
+            Response.Redirect("Login1.aspx", false);
         }
-
-        protected void btnPopulate_Click(object sender, EventArgs e)
-        {
-            // Outer Join SQL Query
-            String sqlQuery = "SELECT FirstName + ' ' + LastName AS Name, Role, Username, Password ";
-            sqlQuery += "FROM UserAccount ";
-
-
-            //Get connection string from web.config file  
-            string strcon = ConfigurationManager.ConnectionStrings["CyberDay"].ConnectionString;
-            //create new sqlconnection and connection to database by using connection string from web.config file  
-            SqlConnection con = new SqlConnection(strcon);
-            SqlDataAdapter sqlAdapter = new SqlDataAdapter(sqlQuery, con);
-            con.Open();
-            DataTable dtForGridTable = new DataTable();
-            sqlAdapter.Fill(dtForGridTable);
-
-            GridView1.DataSource = dtForGridTable;
-            GridView1.DataBind();
-        }
-       
     }
 }

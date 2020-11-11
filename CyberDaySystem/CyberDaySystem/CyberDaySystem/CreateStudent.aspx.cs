@@ -14,6 +14,8 @@ using System.Windows;
 using System.Data;
 using System.Net;
 using System.Net.Mail;
+using System.Data.OleDb;
+using System.IO;
 
 namespace CyberDaySystem
 {
@@ -219,9 +221,128 @@ namespace CyberDaySystem
                 return false;
         }
 
-        protected void rbtnYes_CheckedChanged(object sender, EventArgs e)
+
+ 
+
+
+
+        public static DataTable GetExcelDatatable(string fileUrl)
         {
 
+            string cmdText = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileUrl + "; Extended Properties='Excel 12.0; HDR=Yes; IMEX=1'";
+            System.Data.DataTable dt = null;
+
+            OleDbConnection conn = new OleDbConnection(cmdText);
+            try
+            {
+                if (conn.State == ConnectionState.Broken || conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                System.Data.DataTable schemaTable = conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
+                string strSql = "select * from [Sheet1$]";
+                OleDbDataAdapter da = new OleDbDataAdapter(strSql, conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dt = ds.Tables[0]; ;
+                return dt;
+            }
+            catch (Exception exc)
+            {
+                throw exc;
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
         }
+
+        public static bool SqlBulkCopyToDB(string savePath, string destinationTableName)
+        {
+            DataTable ds = new DataTable();
+            string connectionString = ConfigurationManager.ConnectionStrings["CyberDay"].ConnectionString;
+            using (System.Data.SqlClient.SqlBulkCopy bcp = new System.Data.SqlClient.SqlBulkCopy(connectionString))
+            {
+
+                ds = GetExcelDatatable(savePath);
+                bcp.BatchSize = 100;
+                bcp.NotifyAfter = 100;
+                bcp.DestinationTableName = "Student";
+                bcp.DestinationTableName = destinationTableName; //sql datatable name
+                try
+                {
+                    string[] s = new string[7];
+                    s[0] = "FirstName";
+                    s[1] = "LastName";
+                    s[2] = "Age";
+                    s[3] = "Notes";
+                    s[4] = "LunchTicket";
+                    s[5] = "TeacherID";
+                    s[6] = "ParentAttending";
+                    s[7] = "ParentEmail";
+
+                    for (int i = 0; i < ds.Columns.Count; ++i)
+                    {
+                        //string s = ds.Columns[i].ColumnName;
+                        bcp.ColumnMappings.Add(ds.Columns[i].ColumnName, s[0]);
+                        bcp.ColumnMappings.Add(ds.Columns[i].ColumnName, s[1]);
+                        bcp.ColumnMappings.Add(ds.Columns[i].ColumnName, s[2]);
+                        bcp.ColumnMappings.Add(ds.Columns[i].ColumnName, s[3]);
+                        bcp.ColumnMappings.Add(ds.Columns[i].ColumnName, s[4]);
+                        bcp.ColumnMappings.Add(ds.Columns[i].ColumnName, s[5]);
+                        bcp.ColumnMappings.Add(ds.Columns[i].ColumnName, s[6]);
+                        bcp.ColumnMappings.Add(ds.Columns[i].ColumnName, s[7]);
+
+                    }
+                    bcp.WriteToServer(ds);
+                    return true;
+                    //Response.Write("<script>alert('Excel upload successful!')</script>");   
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return false;
+                    //Response.Write("<script>alert('Excel upload failed!');</script>");
+                }
+            }
+        }
+
+        //protected void btnSelect_Click(object sender, EventArgs e)
+        //{
+        //    if (FileUpload1.HasFile == false)
+        //    {
+        //        Response.Write("<script>alert('Please select an excel file!')</script> ");
+        //        return;
+        //    }
+        //    string IsXls = Path.GetExtension(FileUpload1.FileName).ToString().ToLower();
+        //    if (IsXls != ".xlsx" && IsXls != ".xls")
+        //    {
+        //        Response.Write(FileUpload1.FileName);
+        //        Response.Write("<script>alert('Please check your file type! Thanks! ')</script>");
+        //        return;
+        //    }
+        //    string filename = FileUpload1.FileName;
+        //    string savePath = Server.MapPath(("uploadfiles\\") + filename);
+        //    Response.Write(savePath);
+        //    //savePath ="E:\\Visual Studio 2013 Workspace\\fileUpLoad\\fileUpLoad\\uploadfiles\\201842314025658.xls"
+        //    DataTable ds = new DataTable();
+        //    FileUpload1.SaveAs(savePath);
+        //    bool ok = SqlBulkCopyToDB(savePath, "Student");
+        //    if (ok)
+        //    {
+        //        Response.Write("<script>alert('Excel upload successful!')</script>");
+        //    }
+        //    else
+        //    {
+        //        Response.Write("<script>alert('Excel upload failed!');</script>");
+        //    }
+        //}
+
+
     }
 }
+        
+
+     

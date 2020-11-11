@@ -173,16 +173,6 @@ namespace CyberDaySystem
                 return false;
         }
 
-        protected void btnLinkView_Click(object sender, EventArgs e)
-        {
-            string fname = FileUpload1.FileName;
-            string fLocation = "Event File/";
-            string pathstring = System.IO.Path.Combine(fLocation, fname);
-            //var st = new UploadFile
-            //{
-            //    FileName = TextBox1.Text;
-            //    FileLocation = pathstring;
-            //}
-        }
+
     }
 }

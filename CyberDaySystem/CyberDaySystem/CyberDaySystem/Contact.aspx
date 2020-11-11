@@ -2,8 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+     
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <div class="jumbotron">
+            <h1 class="display-3">JMU Cyber Day Coordinator's</h1>
+            <p class="lead">For all questions concerning JMU's Cyber Day Event, please contact a JMU Cyber Day Coordinator.</p>
+            <hr class="my-4">
+        </div>
     <div class="row">
   <div class="column">
     <div class="card">
