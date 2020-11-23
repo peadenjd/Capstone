@@ -1,13 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CyberDaySystem.WebForm9" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="LogIn1.aspx.cs" Inherits="CyberDaySystem.LogIn1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div>
              <asp:Table runat="server">
                 <asp:TableRow>
@@ -33,7 +29,7 @@
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell ColumnSpan="2">
-                        <asp:Button ID="btnLogin" runat="server" Text="Login ->" OnClick="btnLogin_Click"  />
+                        <asp:Button class="btn btn-success" ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"  />
                         <br />
                         <asp:Label ID="lblStatus" runat="server" Text=""></asp:Label>                         
                     </asp:TableCell>
@@ -45,11 +41,9 @@
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>
-                     <asp:LinkButton ID="lnkcreate" runat="server" OnClick="lnkcreate_Click" >Create New User</asp:LinkButton>
+                     <asp:Button class="btn btn-info" ID="btnCreateUser" runat="server" Text="Create New User" OnClick="btnCreateUser_Click"  />
                     </asp:TableCell>
                 </asp:TableRow>
             </asp:Table>
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>

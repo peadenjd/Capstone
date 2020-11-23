@@ -1,14 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="createUser.aspx.cs" Inherits="CyberDaySystem.WebForm11" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="CreateNewUser.aspx.cs" Inherits="CyberDaySystem.WebForm4" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <div>
              <asp:LinkButton ID="lnkLogin" runat="server" OnClick="lnkLogin_Click">Login</asp:LinkButton>
             <br />
             <br />
@@ -36,9 +32,7 @@
             <asp:Label ID="lblStatus" runat="server"></asp:Label>
             <br />
             <asp:LinkButton ID="lnkAnother" runat="server" OnClick="lnkAnother_Click" Visible="False">Create Another</asp:LinkButton>
-            <br />
-            <br />
-            <asp:Button ID="btnPopulate" runat="server" Text="Populate ->" OnClick="btnPopulate_Click" />
+          
         </div>
         <div>
             <asp:GridView ID="GridView1" 
@@ -46,6 +40,5 @@
                 AlternatingRowStyle-BackColor ="#eaaaff"
                 EmptyDataText ="No Students Selected!" Height="229px" Width="310px"></asp:GridView>
         </div>
-    </form>
-</body>
-</html>
+   
+</asp:Content>
