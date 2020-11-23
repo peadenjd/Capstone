@@ -7,6 +7,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
         <div class="jumbotron">
+            <img src="/images/jmaddy.jpg" class="float-right" >
             <h1 class="display-3">Welcome to CyberDay!</h1>
             <p class="lead">By teaching others about Computer Information Systems, you will learn to develop advanced competencies and diagnostic skills to correct software problems. Mentorship in the CyberDay program, which is a collaborative effort between the College of Business (CoB) and the JMU Office of Admissions, will offer the opportunity to engage middle school students in animation programming or other computer technology activities.  Share your excitement in the field of computer information systems and cultivate the interests of young people in future business/technology related careers. </p>
             <hr class="my-4">

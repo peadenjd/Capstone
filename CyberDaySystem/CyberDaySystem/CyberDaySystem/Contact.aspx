@@ -6,6 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div class="jumbotron">
+             <img src="/images/jmaddy.jpg" class="float-right" >
             <h1 class="display-3">JMU Cyber Day Coordinator's</h1>
             <p class="lead">For all questions concerning JMU's Cyber Day Event, please contact a JMU Cyber Day Coordinator.</p>
             <hr class="my-4">

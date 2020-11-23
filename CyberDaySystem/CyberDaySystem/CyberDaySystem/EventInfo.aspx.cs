@@ -243,8 +243,10 @@ namespace CyberDaySystem
             return dtTable2;
         }
 
+        protected void GridView3_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
     

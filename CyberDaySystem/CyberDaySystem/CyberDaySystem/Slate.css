@@ -4429,6 +4429,7 @@ input[type="button"].btn-block {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    background-color: snow;
     
 }
     .nav .login-container{
@@ -4470,7 +4471,7 @@ input[type="button"].btn-block {
         }
 
         .nav-tabs .nav-link.disabled {
-            color: #7a8288;
+            color: mediumpurple;
             background-color: transparent;
             border-color: transparent;
         }

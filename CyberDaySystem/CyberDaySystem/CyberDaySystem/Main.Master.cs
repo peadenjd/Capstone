@@ -20,7 +20,7 @@ namespace CyberDaySystem
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
 
             //lblIncorrectLogin.ForeColor = Color.Red;
             //if (Session["InvalidUsage"] != null)
@@ -36,20 +36,37 @@ namespace CyberDaySystem
             //{
             //    lblIncorrectLogin.ForeColor = Color.Green; lblIncorrectLogin.Text = "User Successfully Logged Out!";
             //}
+            Control mycontrol1 = FindControl("hi");
+
             if (Session["Username"] == null)
             {
 
                 txtUsername.Visible = true;
                 txtPassword.Visible = true;
                 btnLogIn.Visible = true;
-                
+                hi.Visible = false;
+                hi2.Visible = false;
+                hi3.Visible = false;
+                hi4.Visible = false;
+
+
+
             }
             else
             {
                 txtUsername.Visible = false;
                 txtPassword.Visible = false;
                 btnLogIn.Visible = false;
+                hi.Visible = true;
+                hi2.Visible = true;
+                hi3.Visible = true;
+                hi4.Visible = true;
+
+
+
+
                 lblStatus.Text = "Welcome, " + HttpUtility.HtmlEncode(Session["Username"]) + "!";
+                
             }
 
         }

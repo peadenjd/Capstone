@@ -23,6 +23,7 @@ namespace CyberDaySystem
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
+
         }
         protected void btnCommit_Click(object sender, EventArgs e)
         {

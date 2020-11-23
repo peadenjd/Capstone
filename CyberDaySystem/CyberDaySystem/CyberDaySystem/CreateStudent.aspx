@@ -10,12 +10,12 @@
         <asp:Table runat="server">
             <asp:TableRow>
                 <asp:TableCell ColumnSpan="2" HorizontalAlign="Center">
-                    <asp:Label ID="lblHeaderMessage" runat="server"  Text="Please Fill in the Boxes!" Font-Bold="true" Font-Size="Larger"></asp:Label>
+                    <asp:Label ID="lblHeaderMessage" runat="server"  Text="Create a Student!" Font-Bold="true" Font-Size="Larger"></asp:Label>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblStudentFN" runat="server" Font-Size="Large" ForeColor="White" Text="Student First Name:"></asp:Label>
+                    <asp:Label ID="lblStudentFN" runat="server" Font-Size="Large" ForeColor="Black" Text="Student First Name:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtStudentFN" runat="server"></asp:TextBox>
@@ -24,7 +24,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblStudentLN" runat="server" Font-Size="Large" ForeColor="White" Text="Student Last Name:"></asp:Label>
+                    <asp:Label ID="lblStudentLN" runat="server" Font-Size="Large" ForeColor="Black" Text="Student Last Name:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtStudentLN" runat="server"></asp:TextBox>
@@ -33,7 +33,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblAge" runat="server" Font-Size="Large" ForeColor="White" Text="Age: "></asp:Label>
+                    <asp:Label ID="lblAge" runat="server" Font-Size="Large" ForeColor="Black" Text="Age: "></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtAge" runat="server"></asp:TextBox>
@@ -43,7 +43,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblNotes" runat="server" Font-Size="Large" ForeColor="White" Text="Notes: "></asp:Label>
+                    <asp:Label ID="lblNotes" runat="server" Font-Size="Large" ForeColor="Black" Text="Notes: "></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtNotes" runat="server"></asp:TextBox>
@@ -52,7 +52,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblLunchTicket" runat="server" Font-Size="Large" ForeColor="White" Text="Lunch Ticket: "></asp:Label>
+                    <asp:Label ID="lblLunchTicket" runat="server" Font-Size="Large" ForeColor="Black" Text="Lunch Ticket: "></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtLunchTicket" runat="server"></asp:TextBox>
@@ -61,7 +61,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="parentAttending" runat="server" Font-Size="Large" ForeColor="White" Text="Parent Attending? "></asp:Label>
+                    <asp:Label ID="parentAttending" runat="server" Font-Size="Large" ForeColor="Black" Text="Parent Attending? "></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:RadioButton ID="rbtnYes" runat="server" Text="Yes" Value="1" GroupName="radio" />
@@ -70,7 +70,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="parentEmail" runat="server" Font-Size="Large" ForeColor="White" Text="Parent Email"></asp:Label>
+                    <asp:Label ID="parentEmail" runat="server" Font-Size="Large" ForeColor="Black" Text="Parent Email"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtparentEmail" runat="server"></asp:TextBox>
@@ -78,7 +78,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblParentAuthorization" Font-Size="Large" ForeColor="White" runat="server" Text="Do you agree to the signed photo release of your child?"></asp:Label>
+                    <asp:Label ID="lblParentAuthorization" Font-Size="Large" ForeColor="Black" runat="server" Text="Do you agree to the signed photo release of your child?"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:RadioButtonList ID="rdoParentSignature" runat="server" RepeatDirection="Horizontal">
@@ -103,7 +103,7 @@
         </asp:Table>
     </div>
     <div>
-        <asp:Label ID="Label1" runat="server" Font-Size="Large" ForeColor="White" Text="Select a Teacher: "></asp:Label>
+        <asp:Label ID="Label1" runat="server" Font-Size="Large" ForeColor="Black" Text="Select a Teacher: "></asp:Label>
         <asp:DropDownList
             ID="DropDownList1"
              CssClass="mydropdownlist"
@@ -119,8 +119,8 @@
 
     <div>
 
-        <asp:Button class="btn btn-success" ID="btnCommit" runat="server" Text="Submit" OnClick="btnCommit_Click" />
-        <asp:Button class="btn btn-info" ID="btnDisplay" CausesValidation="false" runat="server" Text="Display" OnClick="btnDisplay_Click" />
+        <asp:Button class="btn btn-primary" ID="btnCommit" runat="server" Text="Submit" OnClick="btnCommit_Click" />
+        <asp:Button class="btn btn-primary" ID="btnDisplay" CausesValidation="false" runat="server" Text="Display" OnClick="btnDisplay_Click" />
         <asp:Button class="btn btn-danger" ID="btnClear" runat="server" Text="Clear" OnClick="btnClear_Click" />
 
         <fieldset>
@@ -132,21 +132,20 @@
                 RowStyle-HorizontalAlign="Center"
                 HeaderStyle-HorizontalAlign="Center"
                 RowStyle-BorderWidth="10px"
-                EmptyDataText="No Students Selected!" Height="229px" Width="310px" CellPadding="4" ForeColor="#333333" GridLines="None">
-                <AlternatingRowStyle BackColor="White"></AlternatingRowStyle>
+                EmptyDataText="No Students Selected!" Height="229px" Width="310px" CellPadding="3" GridLines="None" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellSpacing="1">
 
-                <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
 
-                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White"></HeaderStyle>
+                <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF"></HeaderStyle>
 
-                <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
 
-                <RowStyle BackColor="#FFFBD6" BorderStyle="Groove" ForeColor="#333333"></RowStyle>
-                <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
-                <SortedAscendingCellStyle BackColor="#FDF5AC" />
-                <SortedAscendingHeaderStyle BackColor="#4D0000" />
-                <SortedDescendingCellStyle BackColor="#FCF6C0" />
-                <SortedDescendingHeaderStyle BackColor="#820000" />
+                <RowStyle BackColor="#DEDFDE" BorderStyle="Groove" ForeColor="Black"></RowStyle>
+                <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#594B9C" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#33276A" />
             </asp:GridView>
         </fieldset>
     </div>

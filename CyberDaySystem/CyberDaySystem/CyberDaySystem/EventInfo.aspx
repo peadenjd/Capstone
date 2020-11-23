@@ -1,30 +1,31 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="EventInfo.aspx.cs" Inherits="CyberDaySystem.WebForm1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div>
+    <div>
         <fieldset>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
-&nbsp;
+            &nbsp;
             <br />
-            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="Select an Event :"></asp:Label>
-            <asp:DropDownList 
+            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text="Select an Event :"></asp:Label>
+            <asp:DropDownList
                 CssClass="mydropdownlist"
-                ID="DropDownList1" 
+                ID="DropDownList1"
                 runat="server"
-                AutoPostBack ="true" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                AutoPostBack="true" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
             </asp:DropDownList>
-            
+
         </fieldset>
         <br />
-        
-            <center>
+
+        <center>
                 <h2>Event Report</h2>
                     <br />
-&nbsp;<asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="Event Details:"></asp:Label>
+&nbsp;<asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text="Event Details:"></asp:Label>
               
              <asp:GridView 
                     ID="GridView1"
@@ -32,7 +33,7 @@
                     AutoPostBack="true"
                     AutoGenerateColumns="False"
                     AllowSorting="True"
-                    EmptyDataText ="No Coordinators Selected!" Height="198px" Width="578px" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CaptionAlign="Top" CellPadding="4" HorizontalAlign="Center">
+                    EmptyDataText ="No Coordinators Selected!" Height="198px" Width="578px" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CaptionAlign="Top" CellPadding="3" HorizontalAlign="Center" CellSpacing="1" GridLines="None">
                     
                     <Columns>
                         <asp:BoundField ReadOnly="true"
@@ -69,30 +70,30 @@
        
                        </Columns>
                     <EditRowStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                    <FooterStyle BackColor="White" ForeColor="#333333" />
-                    <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+                    <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
+                    <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
                     <PagerSettings Position="Top" />
-                    <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="White" ForeColor="#333333" />
-                    <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                    <SortedAscendingHeaderStyle BackColor="#487575" />
-                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                    <SortedDescendingHeaderStyle BackColor="#275353" />
+                    <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
+                    <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
+                    <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                    <SortedAscendingHeaderStyle BackColor="#594B9C" />
+                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                    <SortedDescendingHeaderStyle BackColor="#33276A" />
                 </asp:GridView>
 
                 <div style="display: inline-block;">
                     &nbsp;&nbsp;&nbsp;</div>
             <br />
             <br />
-            <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="Volunteer List:"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text="Volunteer List:"></asp:Label>
             <br />
                 <asp:GridView ID="GridView2" 
                     runat="server"
                     AutoPostBack="true"
                     AutoGenerateColumns="False"
                     AllowSorting="True"
-                    EmptyDataText ="No Volunteers Selected!" Height="234px" Width="588px" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" HorizontalAlign="Center">
+                    EmptyDataText ="No Volunteers Selected!" Height="234px" Width="588px" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" GridLines="None" HorizontalAlign="Center" CellSpacing="1">
                 
                     <Columns>
                    
@@ -119,15 +120,15 @@
                         </asp:BoundField>
 
                        </Columns>
-                    <FooterStyle BackColor="#FFFFCC" ForeColor="#333333" />
-                    <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="White" ForeColor="#333333" />
-                    <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                    <SortedAscendingHeaderStyle BackColor="#487575" />
-                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                    <SortedDescendingHeaderStyle BackColor="#275353" />
+                    <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
+                    <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
+                    <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
+                    <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
+                    <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                    <SortedAscendingHeaderStyle BackColor="#594B9C" />
+                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                    <SortedDescendingHeaderStyle BackColor="#33276A" />
                 </asp:GridView>
 
                     <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" Height="50px" Width="578px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource1" Visible="False">
@@ -151,14 +152,14 @@
                 <br />
                 <br />
                     <br />
-                <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="Attendee List:"></asp:Label>
+                <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text="Attendee List:"></asp:Label>
             <br />
             <asp:GridView ID="GridView3" 
                 runat="server"
                  AutoPostBack="true"
                     AutoGenerateColumns="False"
                     AllowSorting="True"
-                    EmptyDataText ="No Students Selected!" Height="229px" Width="598px" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" HorizontalAlign="Center">
+                    EmptyDataText ="No Students Selected!" Height="229px" Width="598px" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" GridLines="None" HorizontalAlign="Center" CellSpacing="1" OnSelectedIndexChanged="GridView3_SelectedIndexChanged">
                 
                     <Columns>
                        
@@ -172,30 +173,34 @@
                             SortExpression="ParentAttending" >  
                         <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         </asp:BoundField>
-                        <asp:BoundField HeaderText="Confirm Meal Ticket" 
-                            DataField="LunchTicket" 
-                            SortExpression="LunchTicket" >  
-                        <HeaderStyle BackColor="#336666" ForeColor="White" />
-                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                        </asp:BoundField>
+                        <asp:TemplateField HeaderText="Confirm Meal Ticket" SortExpression="LunchTicket">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("LunchTicket") %>'></asp:TextBox>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("LunchTicket") %>'></asp:Label>
+                            </ItemTemplate>
+                            <HeaderStyle BackColor="#336666" ForeColor="White" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:TemplateField>
                        </Columns>
-                    <FooterStyle BackColor="#FFFFCC" ForeColor="#333333" />
-                    <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="White" ForeColor="#333333" />
-                    <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                    <SortedAscendingHeaderStyle BackColor="#487575" />
-                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                    <SortedDescendingHeaderStyle BackColor="#275353" />
+                    <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
+                    <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
+                    <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
+                    <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
+                    <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                    <SortedAscendingHeaderStyle BackColor="#594B9C" />
+                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                    <SortedDescendingHeaderStyle BackColor="#33276A" />
                 </asp:GridView>
                 <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" Height="50px" Width="590px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource2" Visible="False">
                     <EditRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
                     <Fields>
                         <asp:BoundField DataField="Column1" HeaderText="Total Number of Confirm Meal Ticket:"  SortExpression="Column1" ReadOnly="True" />
                     </Fields>
-                    <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-                    <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+                    <FooterStyle BackColor="Red" ForeColor="red" />
+                    <HeaderStyle BackColor="Red" Font-Bold="True" ForeColor="White" />
                     <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
                     <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
                 </asp:DetailsView>
@@ -206,14 +211,13 @@
                 </asp:SqlDataSource>
                 <br />
                 </center>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
-            </div>
+    </div>
 
-<%--           <asp:SqlDataSource  
+    <%--           <asp:SqlDataSource  
                 ID="sqlsrcEventQuery"
                 runat="server"
                 ConnectionString="<%$ConnectionStrings:dbconnection %>"
                 SelectCommand="SELECT Event.EventID, Event.EventTitle, Event.Time, Event.Date, Coordinator.FirstName + ' ' + Coordinator.LastName as CoordinatorName,EventPersonnel.FirstName + ' ' + EventPersonnel.LastName as VolunteerName FROM Event, EventPersonnel, EventPresenter, Coordinator WHERE Event.EventID = EventPresenter.EventID and EventPersonnel.PersonnelID = EventPresenter.PersonnelID and Coordinator.CoordinatorID = EventPresenter.CoordinatorID ; " />--%>
-
 </asp:Content>
