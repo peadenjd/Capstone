@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="CyberDay-Web.config Connection String" description="CyberDay Connection String used in web.config by the application to access the database." defaultValue="server=cyberday.cbwnfivwzphd.us-east-1.rds.amazonaws.com;database=CyberDay;uid=peadenjd;password=usmc4020;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\50joh\\OneDrive\\Desktop\\Capstone\\CyberDaySystem\\CyberDaySystem\\CyberDaySystem\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CyberDay']/@connectionString" />
+  </parameter>
+</parameters>

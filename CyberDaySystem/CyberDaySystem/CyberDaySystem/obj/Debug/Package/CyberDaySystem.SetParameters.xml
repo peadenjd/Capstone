@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/" />
+  <setParameter name="CyberDay-Web.config Connection String" value="server=cyberday.cbwnfivwzphd.us-east-1.rds.amazonaws.com;database=CyberDay;uid=peadenjd;password=usmc4020;" />
+</parameters>
